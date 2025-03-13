@@ -1,0 +1,67 @@
+/* Custom styles on top of Tailwind CSS */
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.weather-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #3B82F6;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1E40AF;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.weather-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.weather-detail-item i {
+    color: #60A5FA;
+}
+
+/* Animation for loading spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .temperature {
+        font-size: 2rem;
+    }
+    
+    .weather-icon {
+        font-size: 2.5rem;
+    }
+}
